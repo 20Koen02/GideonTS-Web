@@ -1,0 +1,13 @@
+button:
+  about: Over
+  back: Terug
+  go: GO
+  home: Home
+  toggle_dark: Schakel tussen donkere modus
+  toggle_langs: Verander talen
+intro:
+  desc: Ik ben Gideon, een interactief kunstmatig bewustzijn
+  dynamic-route: Demo van dynamische route
+  hi: Hoi, {name}!
+  whats-your-name: Wat is je naam?
+not-found: Niet gevonden
