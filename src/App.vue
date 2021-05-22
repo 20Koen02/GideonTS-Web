@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
+if (localStorage.locale) locale.value = localStorage.locale
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
