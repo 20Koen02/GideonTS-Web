@@ -1,4 +1,4 @@
-![GideonTS-Web](https://socialify.git.ci/20Koen02/GideonTS-Web/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fcfile1.onoffmix.com%2Fimages%2Fevent%2F98006&owner=1&pulls=1&stargazers=1&theme=Light)
+![GideonTS-Web](https://socialify.git.ci/20Koen02/GideonTS-Web/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fvuejs.org%2Fimages%2Flogo.png&owner=1&pulls=1&stargazers=1&theme=Light)
 
 Web interface for GideonTS
 
