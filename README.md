@@ -1,5 +1,7 @@
 ![GideonTS-Web](https://socialify.git.ci/20Koen02/GideonTS-Web/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fvuejs.org%2Fimages%2Flogo.png&owner=1&pulls=1&stargazers=1&theme=Light)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e36a36a6-c5bc-47ac-9016-9bd6d9118612/deploy-status)](https://app.netlify.com/sites/gideonts-web/deploys)
+
 Web interface for GideonTS
 
 ## Usage
