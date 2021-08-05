@@ -6,8 +6,7 @@ button:
   toggle_dark: Schakel tussen donkere modus
   toggle_langs: Verander talen
 intro:
+  name: Gideon
   desc: Ik ben Gideon, een interactief kunstmatig bewustzijn
-  dynamic-route: Demo van dynamische route
-  hi: Hoi, {name}!
-  whats-your-name: Wat is je naam?
+  whats-your-guild: Wat is je discord server ID?
 not-found: Niet gevonden

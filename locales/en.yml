@@ -6,8 +6,8 @@ button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 intro:
+  name: Gideon
   desc: I am Gideon, an interactive artificial consciousness
-  dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
-  whats-your-name: What's your name?
+  whats-your-guild: What's your discord server ID?
 not-found: Not found

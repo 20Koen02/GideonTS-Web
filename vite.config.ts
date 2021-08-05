@@ -15,6 +15,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+      'socket.io-client': 'socket.io-client/dist/socket.io.js',
     },
   },
   plugins: [
