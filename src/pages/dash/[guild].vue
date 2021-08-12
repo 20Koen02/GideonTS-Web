@@ -35,6 +35,15 @@ interface Score {
 
 const scores = ref<Score[]>([])
 
+function compare(a: Score, b: Score) {
+  if (a.total_exp! > b.total_exp!)
+    return -1
+  if (a.total_exp! < b.total_exp!)
+    return 1
+
+  return 0
+}
+
 // fetch(`http://127.0.0.1:7777/v1/${props.guild}`)
 fetch(`https://gideon-api.koen02.nl/v1/${props.guild}`)
   .then(async(response) => {
@@ -43,9 +52,11 @@ fetch(`https://gideon-api.koen02.nl/v1/${props.guild}`)
       guildIcon.value = data.guildInfo.icon
       guildName.value = data.guildInfo.name
       for (const score of data.scores)
-        score.percentage = ((score.exp || 0) / Math.floor(5 * Math.pow(score.level || 0, 2) + 50 * (score.level || 0) + 100)) * 100
+        score.percentage = Math.round(((score.exp || 0) / Math.floor(5 * Math.pow(score.level || 0, 2) + 50 * (score.level || 0) + 100)) * 100)
 
-      scores.value = data.scores
+      const scoresSorted = data.scores
+      scoresSorted.sort(compare)
+      scores.value = scoresSorted
     }
     else {
       error.value = `Could not find any guild with ID: ${props.guild}`
@@ -96,7 +107,7 @@ fetch(`https://gideon-api.koen02.nl/v1/${props.guild}`)
                 class="w-full h-6 bg-gray-100 dark:bg-darkbg rounded-lg border border-gray-300 dark:border-gray-700 flex-grow mb-3"
               >
                 <div
-                  class="h-full text-center text-xs text-white bg-blue-400 rounded-lg border-2 border-gray-100 dark:border-darkbg"
+                  class="h-full text-center text-xs dark:text-white bg-blue-400 rounded-lg border-2 border-gray-100 dark:border-darkbg"
                   :style="`width: ${score.percentage}%`"
                 >
                   <span>{{ score.percentage }}%</span>
