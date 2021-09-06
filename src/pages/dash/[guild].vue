@@ -82,23 +82,23 @@ fetch(`https://gideon-api.koen02.nl/v1/${props.guild}`)
       <div
         v-for="(score, index) in scores"
         :key="score.user"
-        class="max-w-3xl border dark:border-gray-700 shadow-lg hover:shadow-xl transition duration-500 rounded-lg w-full"
+        class="max-w-3xl border dark:border-gray-700 shadow-lg hover:shadow-xl transition duration-500 rounded-lg w-full "
       >
-        <div class="flex items-center flex-col items-center sm:flex-row">
-          <div class="flex items-center">
-            <span class="sm:ml-10 font-bold text-2xl font-custom">#{{ index + 1 }}</span>
+        <div class="flex flex-col sm:flex-row">
+          <div class="flex items-center justify-center">
+            <span class="sm:ml-10 font-bold text-xl sm:text-2xl font-custom">#{{ index + 1 }}</span>
             <img
               :src="score.avatar"
               :alt="`Avatar of ${score.username}#${score.discriminator}`"
               class="object-contain h-15 my-3 sm:my-6 mx-3 rounded-full"
             />
             <div>
-              <span class="text-2xl font-custom">{{ score.username }}</span>
-              <span class="text-lg text-gray-400 font-custom">#{{ score.discriminator }}</span>
+              <span class="text-xl sm:text-2xl font-custom">{{ score.username }}</span>
+              <span class="sm:text-lg text-gray-400 font-custom">#{{ score.discriminator }}</span>
             </div>
           </div>
-          <div class="flex flex-row items-center flex-grow w-100">
-            <div class="flex items-center flex-col mx-7 flex-grow">
+          <div class="flex flex-row items-center flex-grow">
+            <div class="flex items-center flex-col mx-5 sm:mx-7 flex-grow">
               <span class="font-custom text-sm sm:text-lg">
                 {{ score.exp || 0 }} / {{ Math.floor(5 * Math.pow(score.level || 0, 2) + 50 * (score.level || 0) + 100) }}
                 XP [{{ score.total_exp }} Total]
@@ -114,7 +114,7 @@ fetch(`https://gideon-api.koen02.nl/v1/${props.guild}`)
                 </div>
               </div>
             </div>
-            <span class="text-xl md:text-2xl mr-10 font-custom">Level {{ score.level }}</span>
+            <span class="text-xl sm:text-2xl mr-5 sm:mr-10 font-custom flex-shrink-0">Level {{ score.level }}</span>
           </div>
         </div>
       </div>
